@@ -19,5 +19,5 @@ RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page2
 # Expose the default HTTP port 80
 EXPOSE 80
 
-# Start Apache HTTP server in the foreground
+# Start Apache HTTP server in the foreground ---
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
