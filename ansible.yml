@@ -5,10 +5,14 @@
       environment:
         KUBECONFIG: /home/ubuntu/.kube/config
       command: kubectl delete -f /home/ubuntu/deployment.yml
+      ignore_errors: yes
+
     - name: delete old service
       environment:
         KUBECONFIG: /home/ubuntu/.kube/config
       command: kubectl delete -f /home/ubuntu/service.yml
+      ignore_errors: yes
+
     - name: create new deployment
       environment:
         KUBECONFIG: /home/ubuntu/.kube/config
