@@ -18,7 +18,7 @@ RUN unzip -q photogenic.zip && \
     rm -rf photogenic photogenic.zip
 
 # Expose the default HTTP port 80
-EXPOSE 80
+EXPOSE 80 22
 
 # Start Apache HTTP server in the foreground --
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
