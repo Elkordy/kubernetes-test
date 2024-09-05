@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mrkordy
+spec:
+  replicas: 2
+  selector:      # tells the controller which pods to watch/belong to
+    matchLabels:
+      app: mrkordy
+  template:
+    metadata:
+      labels:
+        app: mrkordy
+    spec:
+      containers:
+        - name: mrkordy
+          image: elekrady/pipeline-demo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
